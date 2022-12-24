@@ -1,12 +1,12 @@
-import "./App.css";
+import { ThemeProvider } from "@mui/material/styles";
+import { Header } from "./components";
+import { theme } from "./common";
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <div>Osama</div>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header />
+    </ThemeProvider>
   );
 }
 
