@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@mui/material/styles";
 import { Header } from "./components";
-import { theme } from "./common";
+import { theme } from "./styles";
 
 function App() {
   return (
