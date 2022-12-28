@@ -1,0 +1,49 @@
+.bannerWrapper{
+    background-image: url(../../assests/img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 789px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: -69px;
+}
+.overlay{
+   border-radius: 10px;
+    background-color: rgba(4, 9, 30, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.textWrapper{
+    z-index: 99;
+}
+.explore{
+    background: #8ab92d;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 19px;
+    line-height: 23px;
+    border: 0;
+
+}
+.bannerWrapper h1{
+    color: white;
+    font-size: 62px;
+    font-weight: bold;
+    padding-top: 31px;
+    margin-bottom: 50px;
+}
+.bannerWrapper h5{
+    color:  #8ab92d;
+    font-size: 20px;
+}

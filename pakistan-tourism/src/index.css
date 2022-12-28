@@ -196,3 +196,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.protfolio-wrap {
+  margin: 50px;
+}
