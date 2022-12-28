@@ -1,11 +1,12 @@
 import { ThemeProvider } from "@mui/material/styles";
-import { Header } from "./components";
+import { Header,Banner } from "./components";
 import { theme } from "./styles";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
+      <Banner/>
     </ThemeProvider>
   );
 }
