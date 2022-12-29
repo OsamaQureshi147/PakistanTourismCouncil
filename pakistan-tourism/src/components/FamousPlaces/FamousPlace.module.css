@@ -1,0 +1,25 @@
+.image_wrapper{
+    width: 25px;
+    height: 30px;
+}
+.places h2{
+    text-align: center;
+}
+.places p{
+ 
+    text-align: center;
+}
+.places ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.places .inside{
+    display: flex;
+    flex-wrap: wrap;
+}
+.places .items{
+    width: 300px;
+    text-align: center;
+
+}

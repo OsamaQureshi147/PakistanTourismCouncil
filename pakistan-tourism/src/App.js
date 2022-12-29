@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@mui/material/styles";
-import { Header,Banner } from "./components";
+import { Header,Banner, FamousPlaces, Services } from "./components";
+import { Reviews } from "./components/CoustomerReviews";
 import { theme } from "./styles";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
       <div className="protfolio-wrap">
       <Header />
       <Banner/>
-
+      <FamousPlaces/>
+      <Services/>
+      <Reviews/>
       </div>
     </ThemeProvider>
   );
