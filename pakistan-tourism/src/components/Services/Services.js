@@ -1,6 +1,8 @@
 import React from 'react'
 
 import classes from './Services.module.css'
+
+import pic1 from "../../assests/images/s1.png"
 export const Services = () => {
   return (
     <div className={classes.Service_background}>
@@ -11,19 +13,19 @@ export const Services = () => {
         </div>
         <div className={classes.ammenties}>
             <div className={classes.inside_ammenties}>
-                <img src='' alt='image1'/>
+                <img src={pic1} alt='image1'/>
                 <h3>Ammenties Selection</h3>
                 <p>its Totally on you what you want and what you want to let go on hetel selection process</p>
             </div>
 
             <div  className={classes.inside_ammenties}>
-                <img src='' alt='image2'/>
+                <img src={pic1} alt='image2'/>
                 <h3>Ammenties Selection</h3>
                 <p>its Totally on you what you want and what you want to let go on hetel selection process</p>
             </div>
 
             <div  className={classes.inside_ammenties}>
-                <img src='' alt='image3'/>
+                <img src={pic1} alt='image3'/>
                 <h3>Ammenties Selection</h3>
                 <p>its Totally on you what you want and what you want to let go on hetel selection process</p>
             </div>

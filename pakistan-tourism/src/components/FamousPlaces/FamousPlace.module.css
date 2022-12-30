@@ -4,22 +4,58 @@
 }
 .places h2{
     text-align: center;
+    margin-top: 100px;
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    line-height: 1.2em !important; 
+    font-weight: 600;
 }
 .places p{
  
-    text-align: center;
+    text-align: center; 
+    margin-top: 20px;
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
 }
 .places ul {
     display: flex;
     gap: 30px;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 .places .inside{
     display: flex;
     flex-wrap: wrap;
+
+    justify-content: space-around;
 }
 .places .items{
-    width: 300px;
+    width: 30%;
     text-align: center;
+    margin-top: 30px;
 
+}
+.items img{
+    width: 100%;
+    border-radius: 10px;
+}
+h3 {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    line-height: 1.2em !important; 
+    font-weight: 600;
+    padding: 20px 0px 0px 0px; 
+}
+.card_desc{
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
 }

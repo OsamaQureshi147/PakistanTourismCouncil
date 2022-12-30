@@ -1,5 +1,5 @@
 .bannerWrapper{
-    background-image: url(../../assests/img/header-bg.jpg);
+    background-image: url(../../assests/images/Faisal_Mosque.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -12,6 +12,7 @@
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    margin-top: -69px;
     
 }
 .overlay{

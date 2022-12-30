@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import classes from "./Header.module.css"
 
 const pages = ["Tourism", "Food", "Culture", "Sports", "About Us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -31,7 +32,7 @@ export function Header() {
   };
 
   return (
-    <AppBar position='static'>
+    <AppBar position = "relative" className={classes.main}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

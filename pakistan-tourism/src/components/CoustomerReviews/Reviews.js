@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Reviews.module.css'
+import pic1 from "../../assests/images/c1.png"
 export const Reviews = () => {
   return (
     <div className={classes.main}>
@@ -11,26 +12,26 @@ export const Reviews = () => {
        
 
         <div className={classes.coment}>
-        <img src='' alt='images4'/>
+        <img src={pic1} alt='images4'/>
         <h4>fannie Rowe</h4>
         <p>it was a life Experiene to visit such a beatiful cultural Country</p>
         </div>
 
         <div className={classes.coment}>
-        <img src='' alt='images4'/>
+        <img src={pic1} alt='images4'/>
         <h4>fannie Rowe</h4>
         <p>it was a life Experiene to visit such a beatiful cultural Country</p>
         </div>
 
 
         <div className={classes.coment}>
-        <img src='' alt='images4'/>
+        <img src={pic1} alt='images4'/>
         <h4>fannie Rowe</h4>
         <p>it was a life Experiene to visit such a beatiful cultural Country</p>
         </div>
 
         <div className={classes.coment}>
-        <img src='' alt='images4'/>
+        <img src={pic1} alt='images4'/>
         <h4>fannie Rowe</h4>
         <p>it was a life Experiene to visit such a beatiful cultural Country</p>
         </div>
