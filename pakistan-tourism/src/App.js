@@ -1,18 +1,12 @@
 import { ThemeProvider } from "@mui/material/styles";
-import { Banner, FamousPlaces, Services, MainLayout } from "./components";
-import { Reviews } from "./components/CoustomerReviews";
+import { AppRoutes } from "./routing";
 import { theme } from "./styles";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className='protfolio-wrap'>
-        <MainLayout>
-          <Banner />
-          <FamousPlaces />
-          <Services />
-          <Reviews />
-        </MainLayout>
+        <AppRoutes />
       </div>
     </ThemeProvider>
   );

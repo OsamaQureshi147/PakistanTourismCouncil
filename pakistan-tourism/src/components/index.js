@@ -4,3 +4,4 @@ export * from "./FamousPlaces";
 export * from "./Services";
 export * from "./Footer";
 export * from "./MainLayout";
+export * from "./CoustomerReviews";

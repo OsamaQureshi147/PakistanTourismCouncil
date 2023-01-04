@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,9 +11,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import classes from "./Header.module.css"
+import classes from "./Header.module.css";
 
-const pages = ["Tourism", "Food", "Culture", "Sports", "About Us"];
+const pages = [
+  { text: "Tourism", link: "/tourism" },
+  { text: "Food", link: "/food" },
+  { text: "Culture", link: "/culture" },
+  { text: "Sports", link: "/sports" },
+  { text: "About Us", link: "/about-us" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export function Header() {
@@ -32,27 +39,27 @@ export function Header() {
   };
 
   return (
-    <AppBar position = "relative" className={classes.main}>
+    <AppBar position='relative' className={classes.main}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant='h6'
-            noWrap
-            component='a'
-            href='/'
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
+          <Link to='/'>
+            <Typography
+              variant='h6'
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "white",
+                textDecoration: "none",
+              }}
+            >
+              LOGO
+            </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -83,10 +90,12 @@ export function Header() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{page}</Typography>
-                </MenuItem>
+              {pages.map(({ text, link }) => (
+                <Link to={link}>
+                  <MenuItem key={text} onClick={handleCloseNavMenu}>
+                    <Typography textAlign='center'>{text}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -116,14 +125,16 @@ export function Header() {
               justifyContent: "center",
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block", mx: 3 }}
-              >
-                {page}
-              </Button>
+            {pages.map(({ text, link }) => (
+              <Link to={link}>
+                <Button
+                  key={text}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block", mx: 3 }}
+                >
+                  {text}
+                </Button>
+              </Link>
             ))}
           </Box>
 
