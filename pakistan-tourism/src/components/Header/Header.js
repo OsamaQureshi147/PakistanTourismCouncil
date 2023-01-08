@@ -14,10 +14,14 @@ import AdbIcon from "@mui/icons-material/Adb";
 import classes from "./Header.module.css";
 
 const pages = [
-  { text: "Tourism", link: "/tourism" },
-  { text: "Food", link: "/food" },
-  { text: "Culture", link: "/culture" },
-  { text: "Sports", link: "/sports" },
+  { text: "Tourism", link: "/tourism" }, 
+  { text: "Culture", link: "/culture" }, 
+  { text: "Trade", link: "/trade" },
+  // { text: "Food", link: "/food" },
+
+
+  { text: "Events", link: "/events" },
+  // { text: "Sports", link: "/sports" },
   { text: "About Us", link: "/about-us" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];

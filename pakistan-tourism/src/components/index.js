@@ -5,3 +5,5 @@ export * from "./Services";
 export * from "./Footer";
 export * from "./MainLayout";
 export * from "./CoustomerReviews";
+export * from "./DescriptionComponent";
+export * from "./BannerSlider"

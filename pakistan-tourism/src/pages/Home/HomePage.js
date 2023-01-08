@@ -4,11 +4,12 @@ import {
   Services,
   Reviews,
   MainLayout,
+  BannerSlider
 } from "../../components";
 
 export const Homepage = () => (
   <MainLayout>
-    <Banner />
+    <BannerSlider />
     <FamousPlaces />
     <Services />
     <Reviews />
