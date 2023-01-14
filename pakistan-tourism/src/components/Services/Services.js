@@ -2,7 +2,14 @@ import React from "react";
 
 import classes from "./Services.module.css";
 
-import pic1 from "../../assests/images/s1.png";
+import { Link } from "react-router-dom";
+
+import honor from "../../assests/icons/honor.png";
+import coperative from "../../assests/icons/coperative.png";
+import Individual from "../../assests/icons/individual.png";
+
+const pages = [{ text: "SignUp", link: "/tourism" }];
+
 export const Services = () => {
   return (
     <div className={classes.Service_background}>
@@ -13,25 +20,27 @@ export const Services = () => {
       </div>
       <div className={classes.ammenties}>
         <div className={classes.inside_ammenties}>
-          <img src={pic1} alt='image1' />
-          <h3>Hounary</h3>
-          <p> 
-            Institutes / Ambassador
-          </p>
+          <Link to='/SignUp'>
+            <img src={honor} alt='image1' />
+            <h3>Honorary</h3>
+            <p>Institutes / Ambassador</p>
+          </Link>
         </div>
 
         <div className={classes.inside_ammenties}>
-          <img src={pic1} alt='image2' />
-          <h3>Co-operate</h3>
-          <p>For Business Persons/ Organizations
-          </p>
+          <Link to='/SignUp'>
+            <img src={coperative} alt='image2' />
+            <h3>corporate</h3>
+            <p>For Business Persons / Organizations</p>
+          </Link>
         </div>
 
         <div className={classes.inside_ammenties}>
-          <img src={pic1} alt='image3' />
-          <h3>Individual</h3>
-          <p> Students/Paid/
-          </p>
+          <Link to='/SignUp'>
+            <img src={Individual} alt='image3' />
+            <h3>Individual</h3>
+            <p> Students / Paid / Contributors</p>
+          </Link>
         </div>
       </div>
     </div>

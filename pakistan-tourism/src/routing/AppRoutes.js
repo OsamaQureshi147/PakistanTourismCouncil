@@ -7,6 +7,7 @@ import {
   SportsPage,
   TourismPage,
 } from "../pages";
+import SignUp from "../pages/Login/SignUp";
 
 export const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ export const AppRoutes = () => {
         <Route path='culture' element={<CulturePage />} />
         <Route path='sports' element={<SportsPage />} />
         <Route path='about-us' element={<AboutUsPage />} />
+        <Route path='SignUp' element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );

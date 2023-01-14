@@ -4,3 +4,4 @@ export * from "./Foods";
 export * from "./Culture";
 export * from "./Sports";
 export * from "./AboutUs";
+export * from "./Login";
