@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Services.module.css";
+import classes from "./Members.module.css";
 
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ import Individual from "../../assests/icons/individual.png";
 
 const pages = [{ text: "SignUp", link: "/tourism" }];
 
-export const Services = () => {
+export const Members = () => {
   return (
     <div className={classes.Service_background}>
       <div className={classes.overlay}></div>
@@ -20,7 +20,7 @@ export const Services = () => {
       </div>
       <div className={classes.ammenties}>
         <div className={classes.inside_ammenties}>
-          <Link to='/SignUp'>
+          <Link to='/SignIn'>
             <img src={honor} alt='image1' />
             <h3>Honorary</h3>
             <p>Institutes / Ambassador</p>

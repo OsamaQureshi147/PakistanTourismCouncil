@@ -1,13 +1,15 @@
-import { React, useRef } from "react";
-import { Link } from "react-router-dom";
-import * as ReactDOM from "react-dom";
+import { React, useRef, useState } from "react";
 import classes from "./Banner.module.css";
-import FamousPlaces from "../FamousPlaces";
 export const Banner = () => {
-  const ref = useRef(null);
+  const [count, setCount] = useState("");
 
   const handleClick = () => {
     alert("here");
+
+    fetch("http://localhost:5000/").then((res) => {
+      console.log("Response:" + JSON.stringify(res));
+    });
+    alert(count);
 
     // ref.current?.scrollIntoView({behavior: 'smooth'});
     // scollToRef.current.scrollIntoView()

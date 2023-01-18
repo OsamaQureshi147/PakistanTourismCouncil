@@ -1,17 +1,17 @@
 import {
   Banner,
   FamousPlaces,
-  Services,
-  Reviews,
+  Members,
+  MemberReviews,
   MainLayout,
-  BannerSlider
+  BannerSlider,
 } from "../../components";
 
 export const Homepage = () => (
   <MainLayout>
     <BannerSlider />
     <FamousPlaces />
-    <Services />
-    <Reviews />
+    <Members />
+    <MemberReviews />
   </MainLayout>
 );

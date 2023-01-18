@@ -1,4 +1,5 @@
 const { getAllEventsQuery } = require("./queries");
+
 const pool = require("../../databasepg");
 
 const getallEvents = (req, res) => {
