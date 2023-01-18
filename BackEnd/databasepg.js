@@ -9,13 +9,3 @@ const pool = new Pool({
 });
 
 module.exports = pool;
-
-// pool.connect();
-
-// client.query("Select * from conditions", (err, res) => {
-//   if (!err) {
-//     console.log(res.rows);
-//   } else {
-//     console.log(err.message);
-//   }
-// });
