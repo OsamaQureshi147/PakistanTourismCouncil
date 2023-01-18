@@ -4,10 +4,12 @@ import {
   CulturePage,
   FoodsPage,
   Homepage,
-  SportsPage,
+  EventsPage,
   TourismPage,
+  AdminPannelPage,
 } from "../pages";
 import SignUp from "../pages/Login/SignUp";
+import SignIn from "../pages/Login/SignIn";
 
 export const AppRoutes = () => {
   return (
@@ -17,9 +19,11 @@ export const AppRoutes = () => {
         <Route path='tourism' element={<TourismPage />} />
         <Route path='food' element={<FoodsPage />} />
         <Route path='culture' element={<CulturePage />} />
-        <Route path='sports' element={<SportsPage />} />
+        <Route path='events' element={<EventsPage />} />
         <Route path='about-us' element={<AboutUsPage />} />
         <Route path='SignUp' element={<SignUp />} />
+        <Route path='SignIn' element={<SignIn />} />
+        <Route path='AdminPannelPage' element={<AdminPannelPage />} />
       </Routes>
     </BrowserRouter>
   );
