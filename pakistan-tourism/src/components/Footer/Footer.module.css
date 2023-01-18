@@ -42,17 +42,20 @@
     font-weight: 400;
     text-transform: lowercase;
     font-size: 1.5rem;
+    color: green;
   }
   
   .footer__addr h2 {
     margin-top: 1.3em;
     font-size: 15px;
     font-weight: 400;
+    
   }
   
   .nav__title {
     font-weight: 400;
     font-size: 15px;
+    color: green;
   }
   
   .footer address {
@@ -108,11 +111,10 @@
   }
   
   .legal {
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
     color: #999;
   }
-    
+
   .legal__links {
     display: flex;
     align-items: center;

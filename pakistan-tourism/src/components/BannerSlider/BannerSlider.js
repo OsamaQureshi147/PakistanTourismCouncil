@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export const BannerSlider = () => {
   let settings = {
-    dots: true, 
+    dots: false, 
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true, 
