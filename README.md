@@ -1,7 +1,7 @@
 # PakistanTourismCouncil
-Pakistan culture app
-React JS
+Pakistan culture app <br\>
+React JS<br\>
 
 
-Recommended Node version: v15.0.1
-Recommended npm version: 7.0.3
+Recommended Node version: v15.0.1<br\>
+Recommended npm version: 7.0.3<br\>
