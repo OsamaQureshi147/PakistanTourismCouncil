@@ -1,5 +1,6 @@
 # PakistanTourismCouncil
 Pakistan culture app
+React JS
 
 
 Recommended Node version: v15.0.1
