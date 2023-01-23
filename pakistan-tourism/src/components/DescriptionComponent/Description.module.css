@@ -38,6 +38,7 @@
 }
 .description .Related_image{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px 0;
 }
@@ -49,6 +50,7 @@
   font-size: 26px;
   text-align: center;
 }
+
 /* __________________ */
 /* Header/Blog Title */
 .header {
@@ -57,7 +59,17 @@
   text-align: center;
   background: white;
 }
-
+@media screen and (max-width: 991px){
+  .description .wrapper{
+    flex-direction: column;
+  }
+  .description .img_wrapper{
+    width: 100%;
+  }
+  .description .text_wrapper{
+    width: 100%;
+  }
+} 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {

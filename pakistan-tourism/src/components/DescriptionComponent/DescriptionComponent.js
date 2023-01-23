@@ -23,12 +23,7 @@ export const DescriptionComponent = (props) => {
             Sikhism. The temple is built around a man-made pool (sarovar) that
             was completed by Guru Ram Das in 1577.{" "}
           </p>
-          <h4>Also Known as</h4>
-          <ul>
-            <li> First Name</li>
-            <li> Second Name</li>
-            <li> Last Name</li>
-          </ul>
+          
         </div>
       </div>
       <div>
