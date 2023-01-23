@@ -5,66 +5,41 @@ import lake_saifulmalook from "../../assests/images/saif-ul-malook.png";
 import { ListItem } from "./ListItem";
 export const DescriptionComponent = (props) => {
   return (
-    <div>
-      <div className={classes.row}>
-        <div className={classes.leftcolumn}>
-          <div className={classes.card}>
-            <br></br>
-            {/* <h5>Title description, Dec 7, 2017</h5> */}
-            {/* <div className={classes.fakeimg} > */}
-            <img src={lake_saifulmalook} alt='images4' />
-            <p className={classes.credit}>
-              (Image Credit :
-              <a href='https://www.google.com' target='_blank'>
-                Danish)
-              </a>
-            </p>
-
-            <br />
-            <br />
-            <h2>{props.title}</h2>
-
-            {/* <div className={classes.fakeimg}  style="height:200px;"> */}
-
-            {/* </div> */}
-            <br />
-            <br />
-            <div className={classes.paragragh}>
-              {props.data.map((e) => {
-                return (
-                  <ListItem heading={e.heading} description={e.description} />
-                );
-              })}
-            </div>
-          </div>
+    <div className={classes.description}>
+      <h2> Saif ul Mulooq </h2>
+      <div className={classes.wrapper}>
+        <div className={classes.img_wrapper}>
+          <img src={lake_saifulmalook} alt= "main Picture"/>
         </div>
-
-        <div className={classes.rightcolumn}>
-          <div className={classes.card}>
-            <h2>About Me</h2>
-            <div className={classes.fakeimg}>
-              {/* <div className={classes.fakeimg} style="height:100px;"> */}
-              Image
-            </div>
-            <p>
-              Some text about me in culpa qui officia deserunt mollit anim..
-            </p>
-          </div>
-          <div className={classes.card}>
-            <h3>Popular Post</h3>
-            <div className={classes.fakeimg}>Image</div>
-            <br></br>
-            <div className={classes.fakeimg}>Image</div>
-            <br></br>
-            <div className={classes.fakeimg}>Image</div>
-          </div>
-          <div className={classes.card}>
-            <h3>Follow Me</h3>
-            <p>Some text..</p>
-          </div>
+        <div className={classes.text_wrapper}>
+          <h4>Description</h4>
+          <p>
+            {" "}
+            The Golden Temple, also known as Sri Harmandir Sahib ("abode of
+            God") or Darbar Sahib, (Punjabi pronunciation: [dəɾbɑɾ sɑhɪb],
+            "exalted holy court"), is a Gurdwara located in the city of
+            Amritsar, Punjab, India.After Gurdwara Janam Asthan, the birthplace
+            of Sikhism, this temple is the most important pilgrimage site of
+            Sikhism. The temple is built around a man-made pool (sarovar) that
+            was completed by Guru Ram Das in 1577.{" "}
+          </p>
+          <h4>Also Known as</h4>
+          <ul>
+            <li> First Name</li>
+            <li> Second Name</li>
+            <li> Last Name</li>
+          </ul>
         </div>
       </div>
-      <br></br>
+      <div>
+        <h3>Related Image</h3>
+      <div className={classes.Related_image}>
+        <h6>Related Image</h6>
+        <h6>Related Image</h6>
+        <h6>Related Image</h6>
+        <h6>Related Image</h6>
+      </div>
+      </div>
     </div>
   );
 };

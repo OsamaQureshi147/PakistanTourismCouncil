@@ -1,4 +1,55 @@
 
+.description{
+  padding-top: 85px;
+  width: 90%;
+  margin: 0 auto;
+}
+.description h2{
+  font-size: 30px;
+  margin-bottom: 20px ;
+}
+.wrapper{
+  display: flex;
+  gap:25px;
+}
+.description h4{
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.description .img_wrapper{
+  width: 60%;
+}
+.description .text_wrapper{
+  width: 35%;
+}
+.description .img_wrapper img{
+  width: 100%;
+}
+.description p{
+  /* line-height: 38px; */
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 25px;
+}
+.description ul li{
+  list-style: disc;
+  font-size: 22px;
+  line-height: 26px;
+}
+.description .Related_image{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+.description h6{
+  font-size: 20px;
+}
+.description h3{
+  margin: 15px 0;
+  font-size: 26px;
+  text-align: center;
+}
+/* __________________ */
 /* Header/Blog Title */
 .header {
   padding: 30px;
