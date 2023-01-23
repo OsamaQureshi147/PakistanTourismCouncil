@@ -59,7 +59,7 @@
 .sliderWrapper img {
   display: flex;
   align-self: center;
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
   object-fit: cover;
   border-radius: 10px;

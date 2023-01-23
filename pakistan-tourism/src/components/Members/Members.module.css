@@ -36,11 +36,17 @@
 .ammenties {
   display: flex;
   position: absolute;
-  width: 100%;
+  width: 90%;
   z-index: 9999;
+  left: 80px;
   bottom: -80px;
   justify-content: space-around;
 }
+@media screen and (max-width: 991px){
+  .ammenties{
+    left: 37px;
+  }
+} 
 .inside_ammenties {
   background-color: white;
   width: 24%;
