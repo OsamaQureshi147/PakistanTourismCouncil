@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import { ListItem } from "./ListItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 export const DescriptionComponent = (props) => {
   let settings = {
     dots: false,
@@ -26,17 +27,17 @@ export const DescriptionComponent = (props) => {
           <div className={classes.slideclass}>
             <Slider {...settings}>
               <div>
-                <image
+                <img
                   src={lake_saifulmalook}
                   className={classes.mainimg}
-                  alt='main Picture'
+                  alt='saif ul malook'
                 />
               </div>
               <div>
-                <image
+                <img
                   src={lake_saifulmalook}
                   className={classes.mainimg}
-                  alt='main Picture'
+                  alt='saif ul malook'
                 />
               </div>
             </Slider>
