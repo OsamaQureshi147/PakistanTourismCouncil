@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   BsTwitter,
   BsFacebook,
@@ -32,25 +33,25 @@ export function Footer() {
 
           <ul className={classes.nav__ul}>
             <li>
-              <a href="#">
+              <Link to='/'>
                 {" "}
                 <BsFacebook />
                 &nbsp;Facebook
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
+              <Link to='/'>
                 <BsTwitter />
                 &nbsp;Twitter
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
+              <Link to='/'>
                 <BsInstagram />
                 &nbsp;Instagram
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
@@ -60,24 +61,24 @@ export function Footer() {
 
           <ul className={classes.nav__ul}>
             <li>
-              <a href="#">
+              <Link to='/'>
                 <ImLocation2 />
                 &nbsp;Islamabad, Pakistan
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
+              <Link to='/'>
                 <BsFillTelephoneFill />
                 &nbsp;+92 051 1234567
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
+              <Link to='/'>
                 <MdMarkEmailUnread />
                 &nbsp;Test@gmail.com
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
@@ -87,15 +88,15 @@ export function Footer() {
 
           <ul className={classes.nav__ul}>
             <li>
-              <a href="#">Privacy Policy</a>
+              <Link to='/'>Privacy Policy</Link>
             </li>
 
             <li>
-              <a href="#">Terms of Use</a>
+              <Link to='/'>Terms of Use</Link>
             </li>
 
             <li>
-              <a href="#">Sitemap</a>
+              <Link to='/'>Sitemap</Link>
             </li>
           </ul>
         </li>

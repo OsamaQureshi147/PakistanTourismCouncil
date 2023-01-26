@@ -1,5 +1,4 @@
 import {
-  Banner,
   FamousPlaces,
   Members,
   MemberReviews,

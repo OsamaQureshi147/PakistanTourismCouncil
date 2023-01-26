@@ -1,19 +1,9 @@
-import { React, useRef, useState } from "react";
+import { React } from "react";
 import classes from "./Banner.module.css";
+
 export const Banner = () => {
-  const [count, setCount] = useState("");
-
-  const handleClick = () => {
-    alert("here");
-
-    fetch("http://localhost:5000/").then((res) => {
-      console.log("Response:" + JSON.stringify(res));
-    });
-    alert(count);
-
-    // ref.current?.scrollIntoView({behavior: 'smooth'});
-    // scollToRef.current.scrollIntoView()
-  };
+  // @TODO adds backend logic and scroll
+  const handleClick = () => {};
 
   return (
     <div className={classes.bannerWrapper}>

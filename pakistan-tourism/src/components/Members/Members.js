@@ -8,8 +8,6 @@ import honor from "../../assests/icons/honor.png";
 import coperative from "../../assests/icons/coperative.png";
 import Individual from "../../assests/icons/individual.png";
 
-const pages = [{ text: "SignUp", link: "/tourism" }];
-
 export const Members = () => {
   return (
     <div className={classes.Service_background}>
