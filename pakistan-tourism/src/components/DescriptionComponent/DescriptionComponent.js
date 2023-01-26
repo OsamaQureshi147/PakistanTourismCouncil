@@ -26,14 +26,14 @@ export const DescriptionComponent = (props) => {
           <div className={classes.slideclass}>
             <Slider {...settings}>
               <div>
-                <img
+                <image
                   src={lake_saifulmalook}
                   className={classes.mainimg}
                   alt='main Picture'
                 />
               </div>
               <div>
-                <img
+                <image
                   src={lake_saifulmalook}
                   className={classes.mainimg}
                   alt='main Picture'
@@ -56,9 +56,9 @@ export const DescriptionComponent = (props) => {
         </div>
       </div>
       <div className={classes.text_wrapper}>
-        {props.data.map((e) => {
-          return <ListItem heading={e.heading} description={e.description} />;
-        })}
+        {props.data.map((e) => (
+          <ListItem heading={e.heading} description={e.description} />
+        ))}
       </div>
     </div>
   );
