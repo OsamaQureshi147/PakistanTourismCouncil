@@ -4,7 +4,7 @@ const cors = require("cors");
 const eventRoutes = require("./src/events/routes");
 
 app.use(cors());
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("API Running"));
