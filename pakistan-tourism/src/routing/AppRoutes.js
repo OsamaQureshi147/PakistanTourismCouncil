@@ -5,11 +5,11 @@ import {
   FoodsPage,
   Homepage,
   EventsPage,
-  TourismPage,
   AdminPannelPage,
 } from "../pages";
 import SignUp from "../pages/Login/SignUp";
 import SignIn from "../pages/Login/SignIn";
+import { TourismPage } from "../pages";
 
 export const AppRoutes = () => {
   return (

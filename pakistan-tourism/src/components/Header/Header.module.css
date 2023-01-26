@@ -1,5 +1,7 @@
 .main{
-    position: relative; 
+    justify-content: space-between !important;
+    background-color: transparent !important;
     z-index: 999; 
-    border-radius: 10px;
+
+    font-weight: bold !important;
 }

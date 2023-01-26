@@ -1,5 +1,6 @@
 .main {
-  padding-top: 45px;
+  padding-top: 150px;
+  margin-bottom: 100px;
 }
 .main h2 {
   text-align: center;
@@ -7,15 +8,17 @@
   font-size: 36px;
   line-height: 26px;
   margin-bottom: 20px;
+  color: green;
 }
 .main .textWrapper {
   padding-top: 20px;
 }
 .main .textWrapper p {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 19px;
+  line-height: 20px;
   margin-bottom: 20px;
   text-align: center;
+  color: gray;
 }
 .reviewWrapper {
   display: flex;
@@ -34,12 +37,34 @@
 .coment p {
   font-size: 18px;
 }
-.coment {
-  background-color: white;
-  width: 100%;
-  padding: 100dp;
+
+.sliderWrapper {
+  max-width: 90%;
+  margin: 0 auto;
   text-align: center;
-  border-radius: 25px;
-  padding: 25px 10px;
-  box-shadow: 0px 10px 30px 0px rgb(138 185 45 / 20%);
+}
+.sliderWrapper .card {
+  width: 90%;
+  display: flex;
+}
+.sliderWrapper img {
+  display: flex;
+  align-self: center;
+  width: 75%;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 10px;
+  height: 285px;
+  margin-bottom: 15px;
+}
+.sliderWrapper h4 {
+  color: green;
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+.sliderWrapper span {
+  color: grey;
+  font-size: 18px;
+  padding-left: 15px;
 }

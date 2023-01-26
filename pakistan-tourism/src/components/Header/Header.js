@@ -43,7 +43,7 @@ export function Header() {
   };
 
   return (
-    <AppBar position='relative' className={classes.main}>
+    <AppBar position='fixed' className={classes.main}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

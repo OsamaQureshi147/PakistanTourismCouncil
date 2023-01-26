@@ -14,6 +14,7 @@
   top: 0;
   bottom: 0;
 }
+
 .Service_background .textWrapper {
   display: flex;
   align-items: center;
@@ -24,34 +25,46 @@
 .textWrapper h2 {
   z-index: 999;
   color: white;
-  margin-bottom: 20px;
-  font-size: 36px;
+  margin: 20px;
+  font-size: 40px;
 }
 .textWrapper p {
   z-index: 999;
   color: white;
-  font-size: 22px;
+  font-size: 20px;
 }
 .ammenties {
   display: flex;
   position: absolute;
-  width: 100%;
+  width: 90%;
   z-index: 9999;
-  bottom: -44px;
+  left: 80px;
+  bottom: -80px;
   justify-content: space-around;
 }
+@media screen and (max-width: 991px){
+  .ammenties{
+    left: 37px;
+  }
+} 
 .inside_ammenties {
   background-color: white;
-  width: 30%;
+  width: 24%;
+  min-height: 250px;
   text-align: center;
   border-radius: 25px;
   padding: 25px 10px;
   box-shadow: 0px 10px 30px 0px rgb(138 185 45 / 20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 .inside_ammenties h3 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 22px;
+  color:  green;
 }
 .inside_ammenties p {
   color: grey;

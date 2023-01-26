@@ -197,6 +197,7 @@ a {
   box-sizing: border-box;
 }
 
-.protfolio-wrap {
-  margin: 50px;
+.portfolio-wrap {
+  position: relative;
+  padding: 0 10px;
 }

@@ -18,6 +18,7 @@
   } */
   
   .footer {
+   
     display: flex;
     padding-left: 20px;
     flex-flow: row wrap;
@@ -25,7 +26,7 @@
     color: #2f2f2f;
     background-color: #fff;
     border-top: 1px solid #e5e5e5;
-    border-radius: 10px;
+    
   }
   
   .footer > * {
@@ -42,17 +43,20 @@
     font-weight: 400;
     text-transform: lowercase;
     font-size: 1.5rem;
+    color: green;
   }
   
   .footer__addr h2 {
     margin-top: 1.3em;
     font-size: 15px;
     font-weight: 400;
+    
   }
   
   .nav__title {
     font-weight: 400;
     font-size: 15px;
+    color: green;
   }
   
   .footer address {
@@ -108,11 +112,10 @@
   }
   
   .legal {
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
     color: #999;
   }
-    
+
   .legal__links {
     display: flex;
     align-items: center;

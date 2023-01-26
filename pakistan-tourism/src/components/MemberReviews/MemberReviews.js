@@ -1,13 +1,16 @@
 import React from "react";
 import classes from "./Reviews.module.css";
-import { MembersReviewCard } from "./MembersReviewCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import danish from "../../assests/images/danish.jpg";
+import osama from "../../assests/images/osama.jpg";
+import moon from "../../assests/images/moon.jpeg";
+
 export const MemberReviews = () => {
   let settings = {
-    dots: true,
-    slidesToShow: 1,
+    dots: false,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
@@ -20,33 +23,27 @@ export const MemberReviews = () => {
         <p>who are in extreme love with family and inviting people</p>
       </div>
 
-      <div className={classes.reviewWrapper}>
-        <div>
-          <MembersReviewCard></MembersReviewCard>
-        </div>
-        <div>
-          <MembersReviewCard></MembersReviewCard>
-        </div>
-      </div>
-
-      <div className={classes.commit}>
+      <div className={classes.sliderWrapper}>
         <Slider {...settings}>
-          <div>
-            <MembersReviewCard></MembersReviewCard>
+          <div className={classes.card}>
+            <img src={osama} alt='danish' />
+            <h4>Osama Ehsan</h4>
+            <span>Engineer</span>
           </div>
-          <div>
-            <MembersReviewCard></MembersReviewCard>
+          <div className={classes.card}>
+            <img src={danish} alt='danish' />
+            <h4>Danish Yahya</h4>
+            <span>Engineer</span>
           </div>
-        </Slider>
-      </div>
-
-      <div>
-        <Slider {...settings}>
-          <div>
-            <MembersReviewCard></MembersReviewCard>
+          <div className={classes.card}>
+            <img src={moon} alt='danish' />
+            <h4>Moon Siknadar</h4>
+            <span>Engineer</span>
           </div>
-          <div>
-            <MembersReviewCard></MembersReviewCard>
+          <div className={classes.card}>
+            <img src={moon} alt='danish' />
+            <h4>Moon Sikandar</h4>
+            <span>Engineer</span>
           </div>
         </Slider>
       </div>

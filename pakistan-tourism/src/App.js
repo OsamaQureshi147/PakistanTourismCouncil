@@ -5,7 +5,7 @@ import { theme } from "./styles";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className='protfolio-wrap'>
+      <div className='portfolio-wrap'>
         <AppRoutes />
       </div>
     </ThemeProvider>
