@@ -1,7 +1,6 @@
-.main{
-    justify-content: space-between !important;
-    background-color: transparent !important;
-    z-index: 999; 
-
-    font-weight: bold !important;
+.main {
+  justify-content: space-between !important;
+  z-index: 999;
+  background-color: rgb(89 142 44 / 85%) !important;
+  font-weight: bold !important;
 }
