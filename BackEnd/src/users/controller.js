@@ -5,13 +5,30 @@ const {
 } = require("./queries");
 
 const pool = require("../../databasepg");
-const { encryptPassword } = require("../../utils/helpers");
+const { encryptPassword, decryptPassword } = require("../../utils/helpers");
 
 const getAllUsers = (req, res) => {
   pool.query(getAllUsersQuery, (err, results) => {
     if (err) throw err;
     res.status(200).json(results.rows);
   });
+};
+
+const signInUser = async (req, res) => {
+  const { password, email } = req.body;
+  try {
+    const userData = await pool.query(getUserByEmailQuery, [email]);
+    const hashedPassword = userData.rows[0].password;
+    const isPasswordCorrect = await decryptPassword(password, hashedPassword);
+    if (isPasswordCorrect) {
+      // @TODO send jwt to frontend when user's password is verified
+      return res.status(200).send("Successful!");
+    } else {
+      return res.status(400).send("Password Incorrect");
+    }
+  } catch (error) {
+    console.error("Error Signing In user: ", error);
+  }
 };
 
 const signUpUser = async (req, res) => {
@@ -34,4 +51,4 @@ const signUpUser = async (req, res) => {
   }
 };
 
-module.exports = { getAllUsers, signUpUser };
+module.exports = { getAllUsers, signUpUser, signInUser };
