@@ -15,6 +15,6 @@ app.use(express.json({ extended: false }));
 app.get("/", (req, res) => res.send("API Running"));
 
 //defining the routes
-// app.use("/api/todos", require("./Routes/api/todos"));
+app.use("/api/v1/events", require("./Routes/api/events"));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
