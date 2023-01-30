@@ -1,16 +1,20 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
-const eventRoutes = require("./src/events/routes");
-const userRoutes = require("./src/users/routes");
+require("dotenv").config();
+const connectDB = require("./db");
+
+const app = express();
 
 app.use(cors());
-const PORT = process.env.PORT || 4000;
+connectDB();
+
+const PORT = process.env.PORT || 5000;
+//Middleware to parse body
 app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("API Running"));
 
-app.use("/api/v1/events", eventRoutes);
-app.use("/api/v1/users", userRoutes);
+//defining the routes
+// app.use("/api/todos", require("./Routes/api/todos"));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
