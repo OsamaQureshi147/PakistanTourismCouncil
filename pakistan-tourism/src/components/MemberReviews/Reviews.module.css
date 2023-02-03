@@ -68,3 +68,27 @@
   font-size: 18px;
   padding-left: 15px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html { */
+/* font-size: 10px; */
+/* font-size: 62.5%; */
+/* } */
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: rgb(190, 190, 190);
+  background-color: #231f3a;
+  letter-spacing: 1px;
+  transition: background-color 0.25s, color 0.25s;
+} */
