@@ -37,12 +37,18 @@ export const MemberReviews = () => {
       <div className={classes.sliderWrapper}>
         <Slider {...settings}>
           {users.map((user) => (
-            <div className={classes.card}>
+            <div className={classes.review_card}>
+              <img src={osama} alt='Review Image' />
+              <h3>{user.name}</h3>
+              <p>{user.email}</p>
+            </div>
+          ))}
+
+          {/* <div className={classes.card}>
               <img src={osama} />
               <h4>{user.name} </h4>
               <span>{user.email} </span>
-            </div>
-          ))}
+            </div> */}
         </Slider>
       </div>
     </div>

@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.title,
+.country,
+.time {
+  font-weight: bold;
+}
+.edit,
+.delete {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
