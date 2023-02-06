@@ -8,3 +8,5 @@ export * from "./BannerSlider";
 export * from "./Members";
 export * from "./MemberReviews";
 export * from "./EventForm";
+export * from "./EventTable";
+export * from "./ProfileCardComponent";
