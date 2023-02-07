@@ -7,20 +7,21 @@ const UsersSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: false,
+    required: true,
   },
   password: {
     type: String,
-    required: false,
+    required: true,
     maxLength: 200,
   },
   bio: {
     type: String,
-    required: true,
+    required: false,
   },
   role: {
     type: String,
     required: true,
+    default: "contributor",
   },
   contact: {
     type: String,

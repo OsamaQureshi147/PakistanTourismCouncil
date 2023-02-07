@@ -12,7 +12,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Copyright(props) {
@@ -36,13 +36,29 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    const email_ = data.get("email");
+    const password_ = data.get("password");
+    const response = await fetch("http://localhost:4000/api/v1/users/SignIn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+
+      body: JSON.stringify({
+        email: email_,
+        password: password_,
+      }),
     });
+    if (response === "email/password incorrect") {
+      console.log("email/password incorrect");
+    } else {
+      navigate("/AdminPannelPage");
+      console.log(response.json());
+    }
+
+    // navigate("/AdminPannelPage");
   };
 
   return (
@@ -108,7 +124,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link to='/AdminPannelPage' variant='body2'>
+                <Link to='/SignUp' variant='body2'>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
