@@ -1,171 +1,123 @@
 import * as React from "react";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-export const EventForm = () => {
-  return (
-    <div>
-      <form>
-        <div>
-          <Box
-            sx={{
-              width: 500,
-              maxWidth: "100%",
-            }}
-          >
-            <TextField
-              required
-              fullWidth
-              id='outlined-required'
-              label='Required'
-              defaultValue='Title'
-            />
-          </Box>
+import { useState, useEffect } from "react";
+import { EventListItem } from "./EventListItem";
 
-          <br />
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import classes from "./Event.module.css";
+export const EventForm = () => {
+  const [events, setEvents] = useState();
+  useEffect(() => {
+    getApiData();
+  }, []);
+
+  const getApiData = async () => {
+    const response = await fetch(`http://localhost:4000/api/v1/events`);
+    const events = await response.json();
+    setEvents(events);
+  };
+
+  if (!events) return null;
+  return (
+    <div className={classes.wrapper}>
+      <h2> fill out the following details</h2>
+      <form>
+        <div className={classes.title}>
+          {/* <label>Title : </label>
+          <input type='text' /> */}
           <TextField
-            disabled
-            id='outlined-disabled'
-            label='Disabled'
-            defaultValue='Hello World'
+            label='Size'
+            id='outlined-size-small'
+            defaultValue='Small'
+            size='small'
           />
-          <TextField
-            id='outlined-password-input'
-            label='Password'
-            type='password'
-            autoComplete='current-password'
-          />
-          <TextField
-            id='outlined-read-only-input'
-            label='Read Only'
-            defaultValue='Hello World'
-            InputProps={{
-              readOnly: true,
-            }}
-          />
-          <TextField
-            id='outlined-number'
-            label='Number'
-            type='number'
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-          <TextField id='outlined-search' label='Search field' type='search' />
-          <TextField
-            id='outlined-helperText'
-            label='Helper text'
-            defaultValue='Default Value'
-            helperText='Some important text'
-          />
+        </div>
+
+        <div className={classes.address}>
+          <label>Address : </label>
+          <input type='text' />
+        </div>
+        <div className={classes.location}>
+          <div className={classes.location_inside}>
+            <label>City : </label>
+            <input type='text' />
+          </div>
+          <div className={classes.location_inside}>
+            <label>Country : </label>
+            <input type='text' />
+          </div>
         </div>
         <div>
-          <TextField
-            required
-            id='filled-required'
-            label='Required'
-            defaultValue='Hello World'
-            variant='filled'
-          />
-          <TextField
-            disabled
-            id='filled-disabled'
-            label='Disabled'
-            defaultValue='Hello World'
-            variant='filled'
-          />
-          <TextField
-            id='filled-password-input'
-            label='Password'
-            type='password'
-            autoComplete='current-password'
-            variant='filled'
-          />
-          <TextField
-            id='filled-read-only-input'
-            label='Read Only'
-            defaultValue='Hello World'
-            InputProps={{
-              readOnly: true,
-            }}
-            variant='filled'
-          />
-          <TextField
-            id='filled-number'
-            label='Number'
-            type='number'
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant='filled'
-          />
-          <TextField
-            id='filled-search'
-            label='Search field'
-            type='search'
-            variant='filled'
-          />
-          <TextField
-            id='filled-helperText'
-            label='Helper text'
-            defaultValue='Default Value'
-            helperText='Some important text'
-            variant='filled'
-          />
+          <div className={classes.title}>
+            {" "}
+            <label>Category : </label>
+            <input type='text' />
+          </div>
+          <div className={classes.title}>
+            <label>External Link : </label>
+            <input type='text' />
+          </div>
         </div>
+        <div className={classes.title}>
+          <div>
+            <label>Event Date&Time :</label>
+            <input type='date' />
+          </div>
+          <div>
+            <label>CreatedAt :</label>
+            <input type='date' />
+          </div>
+        </div>
+
         <div>
-          <TextField
-            required
-            id='standard-required'
-            label='Required'
-            defaultValue='Hello World'
-            variant='standard'
-          />
-          <TextField
-            disabled
-            id='standard-disabled'
-            label='Disabled'
-            defaultValue='Hello World'
-            variant='standard'
-          />
-          <TextField
-            id='standard-password-input'
-            label='Password'
-            type='password'
-            autoComplete='current-password'
-            variant='standard'
-          />
-          <TextField
-            id='standard-read-only-input'
-            label='Read Only'
-            defaultValue='Hello World'
-            InputProps={{
-              readOnly: true,
-            }}
-            variant='standard'
-          />
-          <TextField
-            id='standard-number'
-            label='Number'
-            type='number'
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant='standard'
-          />
-          <TextField
-            id='standard-search'
-            label='Search field'
-            type='search'
-            variant='standard'
-          />
-          <TextField
-            id='standard-helperText'
-            label='Helper text'
-            defaultValue='Default Value'
-            helperText='Some important text'
-            variant='standard'
-          />
+          <div className={classes.title}>
+            {" "}
+            <label>Organised By :</label>
+            <input type='text' />
+          </div>
+          <div className={classes.title}>
+            <label>Contact Number :</label>
+            <input type='number' />
+          </div>
         </div>
+        <div className={classes.description}>
+          <div className={classes.title}>
+            <label>Long Description : </label>
+            <textarea>please write long Description...</textarea>
+          </div>
+          <div className={classes.title}>
+            <label>Short Description :</label>
+            <textarea>please write short Description</textarea>
+          </div>
+        </div>
+
+        <div className={classes.title}>
+          <div>
+            <label>latitude : </label>
+            <input type='number' />{" "}
+          </div>
+
+          <div>
+            <label>longitude : </label>
+            <input type='number' />{" "}
+          </div>
+        </div>
+        <div className={classes.Socialmedia}>
+          <div className={classes.title}>
+            {" "}
+            <label>Instagram :</label>
+            <input type='text' />
+          </div>
+          <div className={classes.title}>
+            <label>Facebook :</label>
+            <input type='text' />
+          </div>
+          <div className={classes.title}>
+            <label>Youtube :</label>
+            <input type='text' />
+          </div>
+        </div>
+        <button>Submit Now</button>
       </form>
     </div>
   );

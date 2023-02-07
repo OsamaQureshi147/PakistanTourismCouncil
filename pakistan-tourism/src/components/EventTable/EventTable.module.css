@@ -1,0 +1,134 @@
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.main {
+  width: 65%;
+}
+.head {
+  background-color: #c0fcdb;
+  font-size: 14px;
+  padding: 5px 15px 0px 15px;
+  border-radius: 10px 10px 0px 0px;
+  width: 20%;
+  margin-left: 30px;
+  justify-content: center;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.buttonheader {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonheader a {
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.head2 {
+  background-color: #c0fcdb;
+  font-size: 14px;
+  padding: 5px 15px 0px 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+h2 small {
+  font-size: 0.5em;
+}
+
+.responsive_table li {
+  border-radius: 40px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.responsive_table .table_header {
+  background: rgb(247, 247, 247);
+  background: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 24%,
+    rgba(224, 255, 238, 1) 47%,
+    rgba(252, 252, 252, 1) 85%
+  );
+
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c0fcdb;
+  justify-content: center;
+
+  box-shadow: 0px 0px 9px 0px rgba(224, 255, 238, 100);
+}
+.responsive_table .table_row {
+  background-color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0px 0px 9px 0px rgba(224, 255, 238, 100);
+}
+.responsive_table .col_1 {
+  margin-left: 40px;
+  flex-basis: 30%;
+}
+.responsive_table .col_2 {
+  flex-basis: 20%;
+  vertical-align: baseline;
+}
+.responsive_table .col_3 {
+  flex-basis: 30%;
+}
+.responsive_table .col_4 {
+  flex-basis: 20%;
+}
+
+.option {
+  background: #cff6dd;
+  border-radius: 30px;
+  padding: 4px 15px 4px 15px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.option:hover {
+  background: #9afcbe;
+  border-radius: 30px;
+  padding: 6px 15px 6px 15px;
+  cursor: pointer;
+}
+@media all and (max-width: 767px) {
+  .responsive_table .table_header {
+    display: none;
+  }
+  .responsive_table li {
+    display: block;
+  }
+  .responsive_table .col {
+    flex-basis: 100%;
+  }
+  .responsive_table .col {
+    display: flex;
+    padding: 10px 0;
+  }
+  .responsive_table .col:before {
+    color: #6c7a89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}

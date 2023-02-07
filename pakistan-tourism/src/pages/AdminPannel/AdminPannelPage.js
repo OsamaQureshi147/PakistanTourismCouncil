@@ -1,8 +1,18 @@
-import { EventForm } from "../../components";
+import {
+  EventForm,
+  EventTable,
+  MainLayout,
+  ProfileCardComponent,
+} from "../../components";
+import classes from "./AdminPannelPage.module.css";
+
 export const AdminPannelPage = () => {
   return (
-    <div>
-      <EventForm></EventForm>
-    </div>
+    <MainLayout>
+      <div className={classes.wrapper}>
+        <ProfileCardComponent></ProfileCardComponent>
+        <EventTable></EventTable>
+      </div>
+    </MainLayout>
   );
 };

@@ -65,14 +65,53 @@ export const PlacesTab = () => {
           centered
         >
           <Tab label='All' {...a11yProps(0)} />
-          <Tab label='North' {...a11yProps(1)} />
-
-          <Tab label='Central' {...a11yProps(2)} />
-          <Tab label='South' {...a11yProps(3)} />
+          <Tab label='Kashmir' {...a11yProps(1)} />
+          <Tab label='Giigit Baltistan' {...a11yProps(2)} />
+          <Tab label='Punjab' {...a11yProps(3)} />
+          <Tab label='Sindh' {...a11yProps(4)} />
+          <Tab label='Balochistan' {...a11yProps(5)} />
+          <Tab label='Kpk' {...a11yProps(6)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className={classes.inside}>Item One</div>
+        <div className={classes.inside}>
+          <PlacesCard
+            name='Gawadar'
+            pic={Gawadar}
+            description='Gwadar is a port city with located on the southwestern coast of Balochistan, Pakistan. The city is located on the shores of the Arabian Sea opposite Oman'
+          />
+          <PlacesCard
+            name='Saif ul Malook'
+            pic={lake_saifulmalook}
+            description='Saiful Muluk is the most famous lake in Pakistan’s city Naran. It is a lovely, clear water lake with a faint green tint located at an elevation of 10,578ft '
+          />
+          <PlacesCard
+            name='Badshai Mosque'
+            pic={pic1}
+            description='constructed by the Mughal emperor Aurangzeb between 1671 and 1673 and was the largest mosque in the world from 1673 to 1986'
+          />
+
+          <PlacesCard
+            name='Passu Cones'
+            pic={passu_cones}
+            description='Passu cones are situated in Passu village in Upper Hunza alongside the Karakorum Highway'
+          />
+          <PlacesCard
+            name='Badshai Mosque'
+            pic={pic1}
+            description='constructed by the Mughal emperor Aurangzeb between 1671 and 1673 and was the largest mosque in the world from 1673 to 1986'
+          />
+          <PlacesCard
+            name='Clifton Beach'
+            pic={seaview}
+            description='Clifton Beach, also known as Sea View, is a beach in Karachi, Sindh, Pakistan and is located on the Arabian Sea'
+          />
+          <PlacesCard
+            name='K2'
+            pic={k2}
+            description=' K2, at 8,611 metres (28,251 ft) above sea level, is the second-highest mountain on Earth, after Mount Everest (at 8,849 metres (29,032 ft))'
+          />
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div className={classes.inside}>
