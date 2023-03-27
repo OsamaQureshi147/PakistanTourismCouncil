@@ -1,0 +1,11 @@
+// Create a Memeber Ship form for any person , Data will be saved in Database, by default value will be not approved,
+// once approval has been done, notifu the user via email he mentioned
+
+// Member card will be replaced by Sponsors, the slickslider will be with sponspors
+make card smaller with logo and name only
+
+// static video along with Member signup section
+footer 
+//
+//
+ 

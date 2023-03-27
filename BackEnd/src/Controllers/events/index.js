@@ -10,6 +10,23 @@ const getAllEvents = async (req, res) => {
   }
 };
 
+const getUserEvent = async (req, res) => {
+  try {
+    const userevent = await Events.find({
+      createdBy: req.body.createdBy,
+    });
+    if (!userevent) {
+      res.status(500).send("No Event Found");
+    } else {
+      console.log("res:" + userevent);
+      res.status(200).send(userevent);
+    }
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send("Server Error");
+  }
+};
+
 const addNewEvent = async (req, res) => {
   const {
     title,
@@ -64,4 +81,5 @@ const addNewEvent = async (req, res) => {
 module.exports = {
   getAllEvents,
   addNewEvent,
+  getUserEvent,
 };

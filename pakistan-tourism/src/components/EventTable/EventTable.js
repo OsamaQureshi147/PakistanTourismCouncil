@@ -33,9 +33,28 @@ export const EventTable = () => {
   }, []);
 
   const getApiData = async () => {
-    const response = await fetch(`http://localhost:4000/api/v1/events`);
-    const events = await response.json();
-    setEvents(events);
+    const response = await fetch(
+      "http://localhost:4000/api/v1/events/getuserevents",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ createdBy: "punjab@ptc.com" }),
+      }
+    );
+
+    if (response === "No Event Found") {
+      console.log("No Event Found");
+    } else {
+      // navigate("/AdminPannelPage");
+      const data = await response.json();
+      const datamap = Array.from(data);
+      console.log("res" + datamap);
+      setEvents(datamap);
+    }
+
+    // const response = await fetch(`localhost:4000/api/v1/events/getuserevents`);
+    // const events = await response.json();
+    // setEvents(events);
   };
 
   if (!events) return null;

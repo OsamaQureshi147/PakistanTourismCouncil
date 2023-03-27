@@ -31,7 +31,7 @@ export const MemberReviews = () => {
   return (
     <div className={classes.main}>
       <div className={classes.textWrapper}>
-        <h2>How our Members felt about us</h2>
+        <h2>How our Sponsors felt about us</h2>
         <p>who are in extreme love with family and inviting people</p>
       </div>
       <div className={classes.sliderWrapper}>
@@ -40,7 +40,7 @@ export const MemberReviews = () => {
             <div className={classes.review_card}>
               <img src={osama} alt='Review Image' />
               <h3>{user.name}</h3>
-              <p>{user.email}</p>
+              <p>{user.bio}</p>
             </div>
           ))}
 

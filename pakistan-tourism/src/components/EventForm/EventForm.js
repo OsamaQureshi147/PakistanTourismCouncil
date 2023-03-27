@@ -1,9 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { EventListItem } from "./EventListItem";
-
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+
 import classes from "./Event.module.css";
 export const EventForm = () => {
   const [events, setEvents] = useState();
@@ -17,73 +15,119 @@ export const EventForm = () => {
     setEvents(events);
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(event.target[0].value);
+    const data = new FormData(event.currentTarget);
+    const email_ = data.get("email");
+    const password_ = data.get("password");
+    const response = await fetch("http://localhost:4000/api/v1/users/SignIn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+
+      body: JSON.stringify({
+        email: email_,
+        password: password_,
+      }),
+    });
+    if (response === "email/password incorrect") {
+      console.log("email/password incorrect");
+    } else {
+      // navigate("/AdminPannelPage");
+      console.log(response.json());
+    }
+
+    // navigate("/AdminPannelPage");
+  };
+
   if (!events) return null;
   return (
     <div className={classes.wrapper}>
-      <h2> fill out the following details</h2>
-      <form>
+      <h2>Create Event</h2>
+      <form onSubmit={handleSubmit}>
         <div className={classes.title}>
-          {/* <label>Title : </label>
-          <input type='text' /> */}
           <TextField
-            label='Size'
+            fullWidth
             id='outlined-size-small'
-            defaultValue='Small'
+            label='Title'
             size='small'
+            margin='dense'
           />
         </div>
-
         <div className={classes.address}>
-          <label>Address : </label>
-          <input type='text' />
+          <TextField
+            fullWidth
+            label='Address'
+            id='outlined-size-small'
+            size='small'
+            margin='dense'
+          />
         </div>
         <div className={classes.location}>
-          <div className={classes.location_inside}>
-            <label>City : </label>
-            <input type='text' />
-          </div>
-          <div className={classes.location_inside}>
-            <label>Country : </label>
-            <input type='text' />
-          </div>
+          <TextField
+            id='outlined-size-small'
+            label='City'
+            size='small'
+            margin='dense'
+          />
+
+          <TextField
+            id='outlined-size-small'
+            label='Category'
+            size='small'
+            margin='dense'
+          />
+
+          <TextField
+            id='outlined-size-small'
+            label='Contact No'
+            size='small'
+            margin='dense'
+          />
         </div>
         <div>
           <div className={classes.title}>
-            {" "}
-            <label>Category : </label>
-            <input type='text' />
-          </div>
-          <div className={classes.title}>
-            <label>External Link : </label>
-            <input type='text' />
+            <TextField
+              fullWidth
+              id='outlined-size-small'
+              label='External Link'
+              size='small'
+              margin='dense'
+            />
           </div>
         </div>
         <div className={classes.title}>
           <div>
-            <label>Event Date&Time :</label>
-            <input type='date' />
+            <TextField
+              fullWidth
+              id='outlined-size-small'
+              label='Date & Time'
+              size='small'
+              margin='dense'
+            />
           </div>
           <div>
-            <label>CreatedAt :</label>
-            <input type='date' />
+            <TextField
+              fullWidth
+              id='outlined-size-small'
+              label='Organised By'
+              size='small'
+              margin='dense'
+            />
           </div>
         </div>
 
-        <div>
-          <div className={classes.title}>
-            {" "}
-            <label>Organised By :</label>
-            <input type='text' />
-          </div>
-          <div className={classes.title}>
-            <label>Contact Number :</label>
-            <input type='number' />
-          </div>
-        </div>
+        <div></div>
         <div className={classes.description}>
           <div className={classes.title}>
-            <label>Long Description : </label>
-            <textarea>please write long Description...</textarea>
+            <TextField
+              fullWidth
+              id='outlined-multiline-static'
+              label='Long Description'
+              margin='dense'
+              multiline
+              rows={2}
+            />
           </div>
           <div className={classes.title}>
             <label>Short Description :</label>
@@ -92,29 +136,29 @@ export const EventForm = () => {
         </div>
 
         <div className={classes.title}>
-          <div>
-            <label>latitude : </label>
-            <input type='number' />{" "}
-          </div>
+          <TextField
+            id='outlined-size-small'
+            label='Lat'
+            size='small'
+            margin='dense'
+          />
 
-          <div>
-            <label>longitude : </label>
-            <input type='number' />{" "}
-          </div>
+          <TextField
+            id='outlined-size-small'
+            label='Long'
+            size='small'
+            margin='dense'
+          />
         </div>
         <div className={classes.Socialmedia}>
           <div className={classes.title}>
-            {" "}
-            <label>Instagram :</label>
-            <input type='text' />
-          </div>
-          <div className={classes.title}>
-            <label>Facebook :</label>
-            <input type='text' />
-          </div>
-          <div className={classes.title}>
-            <label>Youtube :</label>
-            <input type='text' />
+            <TextField
+              id='outlined-size-small'
+              label='Instagram'
+              size='small'
+            />
+            <TextField id='outlined-size-small' label='Youtube' size='small' />
+            <TextField id='outlined-size-small' label='Facebook' size='small' />
           </div>
         </div>
         <button>Submit Now</button>

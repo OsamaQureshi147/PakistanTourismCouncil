@@ -4,9 +4,10 @@
   padding-top: 45px;
   padding-bottom: 45px;
   margin-left: 30px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 50px -10px,
-    rgba(0, 0, 0, 0.3) 0px 15px 30px -10px,
-    rgba(10, 37, 64, 0.1) 0px -2px 5px 0px inset;
+  box-shadow: rgba(83, 177, 132, 0.25) 0px 20px 50px -10px,
+    rgba(204, 204, 204, 0.3) 0px 15px 30px -10px,
+    rgba(25, 84, 144, 0.1) 0px -2px 5px 0px inset;
+  background: linear-gradient(#ffffff, #e5fcee, #ffffff);
 }
 .card img {
   width: 150px;
