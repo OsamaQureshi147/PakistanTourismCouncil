@@ -170,6 +170,7 @@
 body {
   margin: 0;
   font-family: "popins";
+  background: linear-gradient(#141e30, #243b55);
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

@@ -1,18 +1,43 @@
 .Service_background {
-  background-image: url(../../assests/images/service-bg.jpg);
   background-size: cover;
   border-radius: 10px;
   min-height: 400px;
   position: relative;
 }
-.overlay {
-  border-radius: 10px;
-  background: rgba(4, 9, 30, 0.8);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* margin-right: -15px;
+  margin-left: -15px; */
+}
+.rowmember {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.rowmember2 {
+  width: 100%;
+  margin-top: 10px;
+}
+.row2mem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.row1 {
+  flex: 0 0 50%;
+  max-width: 48%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.row2 {
+  flex: 0 0 48%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .Service_background .textWrapper {
@@ -24,22 +49,27 @@
 }
 .textWrapper h2 {
   z-index: 99;
-  color: white;
   margin: 20px;
-  font-size: 40px;
+  font-size: 32px;
+  text-align: center;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  line-height: 1.2em !important;
+  font-weight: 600;
+  color: green;
 }
 .textWrapper p {
   z-index: 99;
-  color: white;
-  font-size: 20px;
+  font-size: 13px;
 }
 .ammenties {
   display: flex;
   position: absolute;
-  width: 90%;
+  width: 40%;
   z-index: 99;
-  left: 80px;
-  bottom: -80px;
+  left: 40px;
+  bottom: -40px;
   justify-content: space-around;
 }
 @media screen and (max-width: 991px) {
@@ -49,11 +79,13 @@
 }
 .inside_ammenties {
   background-color: white;
-  width: 24%;
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
   min-height: 250px;
   text-align: center;
-  border-radius: 25px;
-  padding: 25px 10px;
+  border-radius: 20px;
+  padding: 20px 08px;
   box-shadow: 0px 10px 30px 0px rgb(138 185 45 / 20%);
   display: flex;
   align-items: center;
@@ -62,12 +94,12 @@
 .inside_ammenties h3 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 22px;
+  font-size: 18px;
   color: green;
 }
 .inside_ammenties p {
   color: grey;
   padding: 0 15px;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
 }

@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -32,7 +33,13 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignUp() {
+export default function SignUp(props) {
+  const { type } = useLocation();
+  console.log("sa" + type.data);
+  // const { type } = state;
+  // const { state } = props.location.state;
+  // console.log("data2" + type);
+  // console.log("dada" + props.location);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
