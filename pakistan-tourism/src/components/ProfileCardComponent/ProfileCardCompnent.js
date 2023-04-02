@@ -11,7 +11,7 @@ import {
 export const ProfileCardComponent = () => {
   return (
     <div className={classes.card}>
-      <img src={osama} />
+      <img src={osama} alt='profile' />
       <h3>Osama Ehsan</h3>
       <p>A Programmer, Photographer,in short, jack for all trades</p>
 

@@ -7,8 +7,6 @@ import { MdAddCircleOutline } from "react-icons/md";
 
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
 const style = {
@@ -51,10 +49,6 @@ export const EventTable = () => {
       console.log("res" + datamap);
       setEvents(datamap);
     }
-
-    // const response = await fetch(`localhost:4000/api/v1/events/getuserevents`);
-    // const events = await response.json();
-    // setEvents(events);
   };
 
   if (!events) return null;
@@ -75,10 +69,10 @@ export const EventTable = () => {
         <span className={classes.head}>Your Upcoming Events</span>
 
         <span className={classes.head}>
-          <a onClick={handleOpen}>
+          <button onClick={handleOpen}>
             <MdAddCircleOutline />
             Add New Event
-          </a>
+          </button>
         </span>
       </div>
 

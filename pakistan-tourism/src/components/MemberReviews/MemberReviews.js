@@ -3,9 +3,7 @@ import classes from "./Reviews.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import danish from "../../assests/images/danish.jpg";
 import osama from "../../assests/images/osama.jpg";
-import moon from "../../assests/images/moon.jpeg";
 let settings = {
   dots: false,
   slidesToShow: 3,
@@ -38,17 +36,11 @@ export const MemberReviews = () => {
         <Slider {...settings}>
           {users.map((user) => (
             <div className={classes.review_card}>
-              <img src={osama} alt='Review Image' />
+              <img src={osama} alt='Review' />
               <h3>{user.name}</h3>
               <p>{user.bio}</p>
             </div>
           ))}
-
-          {/* <div className={classes.card}>
-              <img src={osama} />
-              <h4>{user.name} </h4>
-              <span>{user.email} </span>
-            </div> */}
         </Slider>
       </div>
     </div>
