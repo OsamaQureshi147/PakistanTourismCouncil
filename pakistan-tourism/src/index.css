@@ -170,7 +170,6 @@
 body {
   margin: 0;
   font-family: "popins";
-  background: linear-gradient(#141e30, #243b55);
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -187,16 +186,34 @@ p,
 ul,
 li {
   margin: 0;
+  font-family: 'Teko', sans-serif;
 }
 
 li {
   list-style: none;
 }
 
+h1, h2{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1{
+  font-size: 100px;
+  line-height: 1.1;
+}
+
+h2{
+  font-size: 70px !important;
+  line-height: 1.1;
+}
+
 a {
   display: inline-block;
   text-decoration: none !important;
   text-transform: capitalize;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 1px;
 }
 
 * {
@@ -205,5 +222,5 @@ a {
 
 .portfolio-wrap {
   position: relative;
-  padding: 0 10px;
 }
+

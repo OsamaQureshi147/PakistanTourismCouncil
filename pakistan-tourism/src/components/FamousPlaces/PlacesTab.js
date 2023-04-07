@@ -27,7 +27,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -59,18 +59,19 @@ export const PlacesTab = () => {
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
+        style={{border:"0"}}
           value={value}
           onChange={handleChange}
           aria-label='basic tabs example'
           centered
         >
-          <Tab label='All' {...a11yProps(0)} />
-          <Tab label='Kashmir' {...a11yProps(1)} />
-          <Tab label='Giigit Baltistan' {...a11yProps(2)} />
-          <Tab label='Punjab' {...a11yProps(3)} />
-          <Tab label='Sindh' {...a11yProps(4)} />
-          <Tab label='Balochistan' {...a11yProps(5)} />
-          <Tab label='Kpk' {...a11yProps(6)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='All' {...a11yProps(0)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='Kashmir' {...a11yProps(1)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='Giigit Baltistan' {...a11yProps(2)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='Punjab' {...a11yProps(3)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='Sindh' {...a11yProps(4)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='Balochistan' {...a11yProps(5)} />
+          <Tab style={{color:"#999", fontWeight:"400",  fontSize:"14px"}} label='Kpk' {...a11yProps(6)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

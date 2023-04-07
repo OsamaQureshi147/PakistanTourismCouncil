@@ -7,8 +7,7 @@ export const FamousPlaces = () => {
  
   return (
     <div className={classes.places}>
-      <h2>You'll fall in love with Pakistan</h2>
-      <p ref={elementRef}>Explore Pakistan from Gilgit to Karachi</p>
+      <h2>our places</h2>
       <PlacesTab />
     </div>
   );

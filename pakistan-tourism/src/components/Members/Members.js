@@ -32,8 +32,7 @@ export const Members = () => {
               <p>For Business Persons / Organizations</p>
             </Link>
           </div>
-        </div>
-        <div className={classes.rowmember2}>
+
           <div className={classes.inside_ammenties}>
             <Link to='/SignUp' state={{ data: "honorary" }}>
               <img src={honor} alt='image1' />
@@ -43,8 +42,6 @@ export const Members = () => {
           </div>
         </div>
       </div>
-
-      <div className={classes.row2}>hi</div>
     </div>
   );
 };

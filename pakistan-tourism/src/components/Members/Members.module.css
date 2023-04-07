@@ -5,39 +5,13 @@
   position: relative;
 }
 .row {
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /* margin-right: -15px;
-  margin-left: -15px; */
+  max-width: 1200px;
+  margin: 0 auto 50px;
 }
 .rowmember {
-  width: 100%;
   display: flex;
   justify-content: center;
-}
-.rowmember2 {
-  width: 100%;
-  margin-top: 10px;
-}
-.row2mem {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.row1 {
-  flex: 0 0 50%;
-  max-width: 48%;
-  display: table-cell;
-  vertical-align: middle;
-}
-.row2 {
-  flex: 0 0 48%;
-  max-width: 50%;
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  margin: 0 -12px;
 }
 
 .Service_background .textWrapper {
@@ -47,18 +21,25 @@
   flex-direction: column;
   padding-top: 30px;
 }
+
 .textWrapper h2 {
-  z-index: 99;
-  margin: 20px;
-  font-size: 32px;
-  text-align: center;
-  font-size: 36px;
-  font-family: "Poppins", sans-serif;
-  color: #222222;
-  line-height: 1.2em !important;
-  font-weight: 600;
-  color: green;
+  color: #1a293e;
+  position: relative;
+  margin-bottom: 40px;
 }
+
+.textWrapper h2:before {
+  position: absolute;
+  content: '';
+  background: #1a293e;
+  height: 2px;
+  width: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 .textWrapper p {
   z-index: 99;
   font-size: 13px;
@@ -77,29 +58,53 @@
     left: 37px;
   }
 }
-.inside_ammenties {
+.inside_ammenties{
+  width: 33.33%;
+  padding: 0 12px;
+  margin-bottom: 24px;
+}
+
+.inside_ammenties a{
   background-color: white;
   width: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
   min-height: 250px;
   text-align: center;
   border-radius: 20px;
-  padding: 20px 08px;
+  padding: 20px;
   box-shadow: 0px 10px 30px 0px rgb(138 185 45 / 20%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all ease-in-out 0.2s;
+}
+
+.inside_ammenties a:hover{
+  background: #1a293e;;
+}
+
+.inside_ammenties a:hover h3{
+  color: #fff;
+}
+
+.inside_ammenties a:hover p{
+  color: #fff;
+}
+
+.inside_ammenties a img{
+  margin-bottom: 8px;
 }
 .inside_ammenties h3 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 18px;
-  color: green;
+  font-size: 24px;
+  color: rgb(0, 81, 0);
+  text-transform: uppercase;
+  transition: all ease-in-out 0.2s;
 }
 .inside_ammenties p {
   color: grey;
-  padding: 0 15px;
   text-align: center;
-  font-size: 13px;
+  font-size: 18px;
+  transition: all ease-in-out 0.2s;
 }

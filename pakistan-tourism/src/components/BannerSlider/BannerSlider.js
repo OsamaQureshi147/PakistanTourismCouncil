@@ -14,7 +14,7 @@ export const BannerSlider = () => {
     autoplaySpeed: 4000,
   };
   return (
-    <div>
+    <div className="slider-wrapper" style={{overflow: "hidden", marginTop:"68px"}}>
       <Slider {...settings}>
         <div>
           <Banner />

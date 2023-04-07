@@ -1,6 +1,9 @@
 .main {
   justify-content: space-between !important;
   z-index: 999 !important;
-  background-color: var(--primary-transparent-green) !important;
   font-weight: bold !important;
+}
+
+header{
+  background-color: #1a293e !important;
 }
