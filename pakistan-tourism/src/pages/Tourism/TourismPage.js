@@ -28,7 +28,6 @@ export const TourismPage = () => {
         "Ranunculaceae, Compositae, Cruciferae, Gramineae, Apiaceae," +
         "Leguminosae, Scrophulariaceae and Polygonaceae",
     },
-    {},
   ];
 
   return (

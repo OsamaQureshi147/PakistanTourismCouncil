@@ -19,47 +19,48 @@ export const DescriptionComponent = (props) => {
   };
   return (
     <div className={classes.description}>
-      <h2> Saif ul Mulooq </h2>
+      <div className={classes.inner}>
+        <h2> Saif ul Mulooq </h2>
 
-      <div className={classes.wrapper}>
-        <div className={classes.img_wrapper}>
-          <hr />
-          <div className={classes.slideclass}>
-            <Slider {...settings}>
-              <div>
-                <img
-                  src={lake_saifulmalook}
-                  className={classes.mainimg}
-                  alt='saif ul malook'
-                />
-              </div>
-              <div>
-                <img
-                  src={lake_saifulmalook}
-                  className={classes.mainimg}
-                  alt='saif ul malook'
-                />
-              </div>
-            </Slider>
+        <div className={classes.wrapper}>
+          <div className={classes.img_wrapper}>
+            <div className={classes.slideclass}>
+              <Slider {...settings}>
+                <div>
+                  <img
+                    src={lake_saifulmalook}
+                    className={classes.mainimg}
+                    alt='saif ul malook'
+                  />
+                </div>
+                <div>
+                  <img
+                    src={lake_saifulmalook}
+                    className={classes.mainimg}
+                    alt='saif ul malook'
+                  />
+                </div>
+              </Slider>
+            </div>
+          </div>
+          <div className={classes.text_wrapper}>
+            <h3>Introduction</h3>
+            <p>
+              The Temple, also known as Sri Harmandir Sahib ("abode of God") or
+              Darbar Sahib, (Punjabi pronunciation: [dəɾbɑɾ sɑhɪb], "exalted holy
+              court"), is a Gurdwara located in the city of Amritsar, Punjab,
+              India.After Gurdwara Janam Asthan, the birthplace of Sikhism, this
+              temple is the most important pilgrimage site of Sikhism. The temple
+              is built around a man-made pool (sarovar) that was completed by Guru
+              Ram Das in 1577.{" "}
+            </p>
           </div>
         </div>
         <div className={classes.text_wrapper}>
-          <h4>Introduction</h4>
-          <p>
-            The Temple, also known as Sri Harmandir Sahib ("abode of God") or
-            Darbar Sahib, (Punjabi pronunciation: [dəɾbɑɾ sɑhɪb], "exalted holy
-            court"), is a Gurdwara located in the city of Amritsar, Punjab,
-            India.After Gurdwara Janam Asthan, the birthplace of Sikhism, this
-            temple is the most important pilgrimage site of Sikhism. The temple
-            is built around a man-made pool (sarovar) that was completed by Guru
-            Ram Das in 1577.{" "}
-          </p>
+          {props.data.map((e) => (
+            <ListItem heading={e.heading} description={e.description} />
+          ))}
         </div>
-      </div>
-      <div className={classes.text_wrapper}>
-        {props.data.map((e) => (
-          <ListItem heading={e.heading} description={e.description} />
-        ))}
       </div>
     </div>
   );
