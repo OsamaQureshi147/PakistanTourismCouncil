@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 
 import classes from "./Event.module.css";
+
 export const EventForm = () => {
   const [events, setEvents] = useState();
   useEffect(() => {
@@ -17,19 +18,41 @@ export const EventForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(event.target[0].value);
-    const data = new FormData(event.currentTarget);
-    const email_ = data.get("email");
-    const password_ = data.get("password");
-    const response = await fetch("http://localhost:4000/api/v1/users/SignIn", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    console.log(JSON.stringify(event.target.value));
+    console.log("title:" + event.target[0].value);
+    console.log("address:" + event.target[2].value);
+    console.log("city:" + event.target[4].value);
+    console.log("category:" + event.target[6].value);
+    console.log("contact:" + event.target[8].value);
+    console.log("external:" + event.target[10].value);
+    console.log("date/time:" + event.target[12].value);
+    console.log("organised:" + event.target[14].value);
+    console.log("long des:" + event.target[16].value);
+    console.log("lat:" + event.target[22].value);
+    console.log("lng:" + event.target[24].value);
+    console.log("insta:" + event.target[26].value);
+    console.log("you:" + event.target[28].value);
+    console.log("face:" + event.target[30].value);
 
-      body: JSON.stringify({
-        email: email_,
-        password: password_,
-      }),
-    });
+    // 0 4 6 8 10  12 14
+
+    console.log("18:" + event.target[18].value);
+    console.log("22:" + event.target[22].value);
+    console.log("2:" + event.target[32].value);
+
+    const data = new FormData(event.currentTarget);
+    const response = await fetch(
+      "http://localhost:4000/api/v1/events/addNewEvent",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+
+        // body: JSON.stringify({
+        //   email: email_,
+        //   password: password_,
+        // }),
+      }
+    );
     if (response === "email/password incorrect") {
       console.log("email/password incorrect");
     } else {
@@ -130,8 +153,14 @@ export const EventForm = () => {
             />
           </div>
           <div className={classes.title}>
-            <label>Short Description :</label>
-            <textarea>please write short Description</textarea>
+            <TextField
+              fullWidth
+              id='outlined-multiline-static'
+              label='Short Description'
+              margin='dense'
+              multiline
+              rows={1}
+            />
           </div>
         </div>
 

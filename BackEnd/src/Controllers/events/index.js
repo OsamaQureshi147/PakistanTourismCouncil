@@ -71,6 +71,7 @@ const addNewEvent = async (req, res) => {
       instagramLink,
     });
     await event.save();
+
     res.status(200).send("Event added!");
   } catch (error) {
     console.log(error.message);
