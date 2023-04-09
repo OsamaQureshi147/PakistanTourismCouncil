@@ -6,6 +6,9 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -13,7 +16,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { formInitialValues, validationSchema } from "./helpers";
 import classes from "./Event.module.css";
 
-export const EventForm = ({ onSubmitForm }) => {
+export const EventForm = ({ onSubmitForm, onSuccess }) => {
   const [events, setEvents] = useState();
   useEffect(() => {
     getApiData();
@@ -71,6 +74,7 @@ export const EventForm = ({ onSubmitForm }) => {
       );
       console.log("Response", response);
       onSubmitForm();
+      onSuccess();
     } catch (err) {
       console.log("Error Occured while submitting", err);
     }
@@ -148,20 +152,21 @@ export const EventForm = ({ onSubmitForm }) => {
             helperText={touched.city && errors.city}
             style={{ flex: "1 1 0" }}
           />
-
-          <TextField
-            name='date_time'
-            fullWidth
-            id='outlined-size-small'
-            label='Date & Time'
-            size='small'
-            margin='dense'
-            onChange={handleChange}
-            value={values.date_time}
-            error={touched.date_time && Boolean(errors.date_time)}
-            helperText={touched.date_time && errors.date_time}
-            style={{ flex: "1 1 0" }}
-          />
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DateTimePicker
+              name='date_time'
+              fullWidth
+              id='outlined-size-small'
+              label='Date & Time'
+              size='small'
+              margin='dense'
+              onChange={handleChange}
+              value={values.date_time}
+              error={touched.date_time && Boolean(errors.date_time)}
+              helperText={touched.date_time && errors.date_time}
+              style={{ flex: "1 1 0" }}
+            />
+          </LocalizationProvider>
         </Box>
         <TextField
           name='long_desc'
@@ -262,9 +267,6 @@ export const EventForm = ({ onSubmitForm }) => {
               helperText={errors.insta_profile}
             />
           </Box>
-        </Box>
-
-        <Box display='flex' columnGap='10px' marginY='10px'>
           <Box display='flex' alignItems='flex-end'>
             <YouTubeIcon sx={{ color: "#c4302b", mr: 1, my: 0.5 }} />
             <Input
@@ -280,6 +282,7 @@ export const EventForm = ({ onSubmitForm }) => {
             />
           </Box>
         </Box>
+
         <Input
           name='external_link'
           id='outlined-size-small'
