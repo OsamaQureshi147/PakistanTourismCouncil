@@ -92,7 +92,7 @@ export function Header() {
               }}
             >
               {pages.map(({ text, link }) => (
-                <Link to={link}>
+                <Link to={link} key={link}>
                   <MenuItem key={text} onClick={handleCloseNavMenu}>
                     <Typography textAlign='center'>{text}</Typography>
                   </MenuItem>
@@ -127,7 +127,7 @@ export function Header() {
             }}
           >
             {pages.map(({ text, link }) => (
-              <Link to={link}>
+              <Link to={link} key={link}>
                 <Button
                   key={text}
                   onClick={handleCloseNavMenu}

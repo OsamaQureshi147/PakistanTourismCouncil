@@ -19,6 +19,8 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  height: "90%",
+  overflowY: "scroll",
 };
 
 export const EventTable = () => {
@@ -46,7 +48,6 @@ export const EventTable = () => {
       // navigate("/AdminPannelPage");
       const data = await response.json();
       const datamap = Array.from(data);
-      console.log("res" + datamap);
       setEvents(datamap);
     }
   };
@@ -61,7 +62,7 @@ export const EventTable = () => {
         aria-describedby='modal-modal-description'
       >
         <Box sx={style}>
-          <EventForm></EventForm>
+          <EventForm />
         </Box>
       </Modal>
 
@@ -84,8 +85,8 @@ export const EventTable = () => {
           <div className={(classes.col, classes.col_4)}>Options</div>
         </li>
 
-        {events.map((e) => (
-          <li className={classes.table_row}>
+        {events.map((e, index) => (
+          <li key={index} className={classes.table_row}>
             <div className={(classes.col, classes.col_1)} data-label='Event'>
               {e.title}
             </div>
