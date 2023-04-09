@@ -8,7 +8,7 @@ export const formInitialValues = {
   contact_no: "",
   external_link: "",
   date_time: "",
-  organised_by: "",
+  organised_by: "punjab@ptc.com",
   long_desc: "",
   short_desc: "",
   lat: "",
@@ -19,7 +19,7 @@ export const formInitialValues = {
 };
 
 export const validationSchema = yup.object({
-  title: yup.string().required().min(2).max(10),
+  title: yup.string().required().min(2).max(20),
   address: yup.string(),
   city: yup.string().required().max(30),
   category: yup.string().max(50),

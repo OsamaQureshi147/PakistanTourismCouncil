@@ -5,7 +5,6 @@ import { EventForm } from "../EventForm/EventForm";
 import { ImLocation2 } from "react-icons/im";
 import { MdAddCircleOutline } from "react-icons/md";
 
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
@@ -25,7 +24,7 @@ const style = {
 
 export const EventTable = () => {
   const [events, setEvents] = useState();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   useEffect(() => {
@@ -62,7 +61,7 @@ export const EventTable = () => {
         aria-describedby='modal-modal-description'
       >
         <Box sx={style}>
-          <EventForm />
+          <EventForm onSubmitForm={handleClose} />
         </Box>
       </Modal>
 

@@ -1,14 +1,14 @@
 import { createTheme } from "@mui/material/styles";
-import { primaryGreen, secondaryFolly, successGreen } from "./colors";
+import { primaryBlack, secondaryWhite, successGreen } from "./colors";
 
 export const theme = createTheme({
   palette: {
     type: "light",
     primary: {
-      main: primaryGreen,
+      main: primaryBlack,
     },
     secondary: {
-      main: secondaryFolly,
+      main: secondaryWhite,
     },
     success: {
       main: successGreen,
